@@ -1,7 +1,7 @@
 # Museomix-2021-Mouans-Sartoux
 Archimix Project
 
-Les vidédos sont disponibles ici ! :
+Les vidéos sont disponibles ici :
 
 [![Escalier](https://imgur.com/XqRArVT](https://www.youtube.com/watch?v=PwWfGdvr6NI "Escalier")
 
