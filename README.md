@@ -1,6 +1,8 @@
 # Museomix-2021-Mouans-Sartoux
 Archimix Project
 
-[![Escalier](http://wikithionville.fr/images/7/7e/Escalier.JPG](https://www.youtube.com/watch?v=PwWfGdvr6NI "escalier")
+Les vidédos sont disponibles ici ! :
 
-[![Video du plafond](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=vfvvTkGQxo0 "Video du plafond")
+[![Escalier](https://imgur.com/XqRArVT](https://www.youtube.com/watch?v=PwWfGdvr6NI "Escalier")
+
+[![Video du plafond](https://imgur.com/a/vJrSqy3)](https://www.youtube.com/watch?v=vfvvTkGQxo0 "Video du plafond")
