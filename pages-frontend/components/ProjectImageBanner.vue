@@ -1,9 +1,9 @@
 <!--
 /**
- * File Name: TheTitle.vue
+ * File Name: ProjectImageBanner.vue
  * Author: Alexandre Kévin DE FREITAS MARTINS
  * Creation Date: 2024
- * Description: TheTitle.vue
+ * Description: ProjectImageBanner.vue
  * Company: Tux Inc.
  * Version: 1.0.0
  * License: MIT
@@ -28,8 +28,27 @@
  */
 -->
 
+<script setup lang="ts">
+defineProps({
+    img: {
+        type: String,
+        default: "/img/img.jpg",
+    },
+});
+</script>
+
 <template>
-    <h1 class="text-4xl text-center">
-        <ContentSlot :use="$slots.default" unwrap="p" />
-    </h1>
+    <div>
+        <div class="justify-center">
+            <div class="col-12 sm-12 md-8">
+                <article class="nuxt-article">
+                    <img
+                        :src="`/img/${img}`"
+                        alt="${img}"
+                        class="pa-9 align-end rounded-lg shadow-2xl my-2"
+                    />
+                </article>
+            </div>
+        </div>
+    </div>
 </template>

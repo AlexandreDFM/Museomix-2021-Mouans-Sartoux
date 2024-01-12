@@ -1,9 +1,9 @@
 <!--
 /**
- * File Name: TheTitle.vue
+ * File Name: [...slug].vue
  * Author: Alexandre Kévin DE FREITAS MARTINS
  * Creation Date: 2024
- * Description: TheTitle.vue
+ * Description: [...slug].vue
  * Company: Tux Inc.
  * Version: 1.0.0
  * License: MIT
@@ -28,8 +28,23 @@
  */
 -->
 
+<script setup lang="ts">
+const emits = defineEmits<{ (event: "setTitle", title: string): void }>();
+
+const title = "Tux Inc. - Home";
+emits("setTitle", title);
+</script>
+
 <template>
-    <h1 class="text-4xl text-center">
-        <ContentSlot :use="$slots.default" unwrap="p" />
-    </h1>
+    <div class="flex flex-col items-center justify-center overflow-hidden">
+        <div class="text-light-500 gap-4 max-w-[900px] mx-auto p-4">
+            <div id="nuxtContent">
+                <ContentDoc v-slot="{ doc }">
+                    <article class="text-gray-300">
+                        <ContentRenderer :value="doc" class="text-primary" />
+                    </article>
+                </ContentDoc>
+            </div>
+        </div>
+    </div>
 </template>

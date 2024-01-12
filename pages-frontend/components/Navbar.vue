@@ -1,9 +1,9 @@
 <!--
 /**
- * File Name: TheTitle.vue
+ * File Name: Navbar.vue
  * Author: Alexandre Kévin DE FREITAS MARTINS
  * Creation Date: 2024
- * Description: TheTitle.vue
+ * Description: Navbar.vue
  * Company: Tux Inc.
  * Version: 1.0.0
  * License: MIT
@@ -28,8 +28,34 @@
  */
 -->
 
+<script setup lang="ts">
+const props = defineProps<{
+    title: string;
+}>();
+</script>
+
 <template>
-    <h1 class="text-4xl text-center">
-        <ContentSlot :use="$slots.default" unwrap="p" />
-    </h1>
+    <header
+        class="fixed w-full top-0 z-50 border-b border-gray-700 backdrop-blur"
+    >
+        <div
+            class="flex items-center justify-between gap-3 h-[--header-height] mx-auto px-4 md:px-6 lg:px-8 max-w-7xl"
+        >
+            <div class="flex items-center justify-start">
+                <div
+                    class="text-light-500 rounded-2xl flex flex-row items-center justify-center"
+                    @click="$router.go(-1)"
+                >
+                    <Icon color="white" name="uil:arrow-left" size="32" />
+                    <span class="text-white font-bold"> Go back </span>
+                </div>
+            </div>
+            <div class="flex flex-row gap-2 items-center mr-14">
+                <h1 class="text-2xl font-bold items-center">
+                    {{ props.title }}
+                </h1>
+            </div>
+            <div class="flex gap-2 items-center"></div>
+        </div>
+    </header>
 </template>

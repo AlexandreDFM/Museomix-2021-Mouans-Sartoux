@@ -1,12 +1,9 @@
-<!--
 /**
- * File Name: TheTitle.vue
+ * File Name: tailwind.config.js
  * Author: Alexandre Kévin DE FREITAS MARTINS
  * Creation Date: 2024
- * Description: TheTitle.vue
- * Company: Tux Inc.
- * Version: 1.0.0
- * License: MIT
+ * Description: tailwind.config.js
+ * Copyright (c) 2024 Tux Inc.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the 'Software'), to deal
@@ -26,10 +23,30 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
--->
 
-<template>
-    <h1 class="text-4xl text-center">
-        <ContentSlot :use="$slots.default" unwrap="p" />
-    </h1>
-</template>
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: [
+        "./components/**/*.{js,vue,ts}",
+        "./layouts/**/*.vue",
+        "./pages/**/*.vue",
+        "./plugins/**/*.{js,ts}",
+        "./app.vue",
+        "./error.vue",
+    ],
+    theme: {
+        extend: {
+            backgroundImage: {
+                "gradient-radial":
+                    "radial-gradient(50% 50% at 50% 50%, var(--tw-gradient-stops))",
+            },
+            fontFamily: {
+                sans: ["DM Sans", "sans-serif"],
+            },
+            height: {
+                header: "4rem",
+            },
+        },
+    },
+    plugins: [],
+};
